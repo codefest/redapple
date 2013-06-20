@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.27)
 # Database: redapple
-# Generation Time: 2013-06-20 23:14:31 +0000
+# Generation Time: 2013-06-20 22:53:26 +0000
 # ************************************************************
 
 
@@ -163,8 +163,8 @@ VALUES
 	(41,'gmt_offset','0','yes'),
 	(42,'default_email_category','1','yes'),
 	(43,'recently_edited','','no'),
-	(44,'template','redapple','yes'),
-	(45,'stylesheet','redapple','yes'),
+	(44,'template','twentytwelve','yes'),
+	(45,'stylesheet','twentytwelve','yes'),
 	(46,'comment_whitelist','1','yes'),
 	(47,'blacklist_keys','','no'),
 	(48,'comment_registration','0','yes'),
@@ -217,13 +217,13 @@ VALUES
 	(95,'widget_recent-comments','a:2:{i:2;a:2:{s:5:\"title\";s:0:\"\";s:6:\"number\";i:5;}s:12:\"_multiwidget\";i:1;}','yes'),
 	(96,'widget_archives','a:2:{i:2;a:3:{s:5:\"title\";s:0:\"\";s:5:\"count\";i:0;s:8:\"dropdown\";i:0;}s:12:\"_multiwidget\";i:1;}','yes'),
 	(97,'widget_meta','a:2:{i:2;a:1:{s:5:\"title\";s:0:\"\";}s:12:\"_multiwidget\";i:1;}','yes'),
-	(98,'sidebars_widgets','a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:18:\"orphaned_widgets_1\";a:6:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";i:3;s:10:\"archives-2\";i:4;s:12:\"categories-2\";i:5;s:6:\"meta-2\";}s:13:\"array_version\";i:3;}','yes'),
+	(98,'sidebars_widgets','a:5:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:6:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";i:3;s:10:\"archives-2\";i:4;s:12:\"categories-2\";i:5;s:6:\"meta-2\";}s:9:\"sidebar-2\";a:0:{}s:9:\"sidebar-3\";a:0:{}s:13:\"array_version\";i:3;}','yes'),
 	(99,'cron','a:3:{i:1371811822;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1371855026;a:1:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}','yes'),
 	(101,'_site_transient_update_core','O:8:\"stdClass\":3:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":9:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:40:\"http://wordpress.org/wordpress-3.5.1.zip\";s:6:\"locale\";s:5:\"en_US\";s:8:\"packages\";O:8:\"stdClass\":4:{s:4:\"full\";s:40:\"http://wordpress.org/wordpress-3.5.1.zip\";s:10:\"no_content\";s:51:\"http://wordpress.org/wordpress-3.5.1-no-content.zip\";s:11:\"new_bundled\";s:52:\"http://wordpress.org/wordpress-3.5.1-new-bundled.zip\";s:7:\"partial\";b:0;}s:7:\"current\";s:5:\"3.5.1\";s:11:\"php_version\";s:5:\"5.2.4\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"3.5\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1371768626;s:15:\"version_checked\";s:5:\"3.5.1\";}','yes'),
 	(102,'_site_transient_update_plugins','O:8:\"stdClass\":3:{s:12:\"last_checked\";i:1371768631;s:7:\"checked\";a:2:{s:19:\"akismet/akismet.php\";s:5:\"2.5.7\";s:9:\"hello.php\";s:3:\"1.6\";}s:8:\"response\";a:1:{s:19:\"akismet/akismet.php\";O:8:\"stdClass\":5:{s:2:\"id\";s:2:\"15\";s:4:\"slug\";s:7:\"akismet\";s:11:\"new_version\";s:5:\"2.5.8\";s:3:\"url\";s:37:\"http://wordpress.org/plugins/akismet/\";s:7:\"package\";s:55:\"http://downloads.wordpress.org/plugin/akismet.2.5.8.zip\";}}}','yes'),
-	(103,'_site_transient_timeout_theme_roots','1371771279','yes'),
-	(104,'_site_transient_theme_roots','a:3:{s:8:\"redapple\";s:7:\"/themes\";s:12:\"twentyeleven\";s:7:\"/themes\";s:12:\"twentytwelve\";s:7:\"/themes\";}','yes'),
-	(105,'_site_transient_update_themes','O:8:\"stdClass\":3:{s:12:\"last_checked\";i:1371769514;s:7:\"checked\";a:3:{s:8:\"redapple\";s:3:\"0.1\";s:12:\"twentyeleven\";s:3:\"1.5\";s:12:\"twentytwelve\";s:3:\"1.1\";}s:8:\"response\";a:0:{}}','yes'),
+	(103,'_site_transient_timeout_theme_roots','1371770426','yes'),
+	(104,'_site_transient_theme_roots','a:2:{s:12:\"twentyeleven\";s:7:\"/themes\";s:12:\"twentytwelve\";s:7:\"/themes\";}','yes'),
+	(105,'_site_transient_update_themes','O:8:\"stdClass\":3:{s:12:\"last_checked\";i:1371768626;s:7:\"checked\";a:2:{s:12:\"twentyeleven\";s:3:\"1.5\";s:12:\"twentytwelve\";s:3:\"1.1\";}s:8:\"response\";a:0:{}}','yes'),
 	(106,'_site_transient_timeout_browser_b14e94511e73e89a074c3853548dbee3','1372373426','yes'),
 	(107,'_site_transient_browser_b14e94511e73e89a074c3853548dbee3','a:9:{s:8:\"platform\";s:9:\"Macintosh\";s:4:\"name\";s:6:\"Chrome\";s:7:\"version\";s:13:\"27.0.1453.116\";s:10:\"update_url\";s:28:\"http://www.google.com/chrome\";s:7:\"img_src\";s:49:\"http://s.wordpress.org/images/browsers/chrome.png\";s:11:\"img_src_ssl\";s:48:\"https://wordpress.org/images/browsers/chrome.png\";s:15:\"current_version\";s:2:\"18\";s:7:\"upgrade\";b:0;s:8:\"insecure\";b:0;}','yes'),
 	(108,'dashboard_widget_options','a:4:{s:25:\"dashboard_recent_comments\";a:1:{s:5:\"items\";i:5;}s:24:\"dashboard_incoming_links\";a:5:{s:4:\"home\";s:25:\"http://localhost/redapple\";s:4:\"link\";s:101:\"http://blogsearch.google.com/blogsearch?scoring=d&partner=wordpress&q=link:http://localhost/redapple/\";s:3:\"url\";s:134:\"http://blogsearch.google.com/blogsearch_feeds?scoring=d&ie=utf-8&num=10&output=rss&partner=wordpress&q=link:http://localhost/redapple/\";s:5:\"items\";i:10;s:9:\"show_date\";b:0;}s:17:\"dashboard_primary\";a:7:{s:4:\"link\";s:26:\"http://wordpress.org/news/\";s:3:\"url\";s:31:\"http://wordpress.org/news/feed/\";s:5:\"title\";s:14:\"WordPress Blog\";s:5:\"items\";i:2;s:12:\"show_summary\";i:1;s:11:\"show_author\";i:0;s:9:\"show_date\";i:1;}s:19:\"dashboard_secondary\";a:7:{s:4:\"link\";s:28:\"http://planet.wordpress.org/\";s:3:\"url\";s:33:\"http://planet.wordpress.org/feed/\";s:5:\"title\";s:20:\"Other WordPress News\";s:5:\"items\";i:5;s:12:\"show_summary\";i:0;s:11:\"show_author\";i:0;s:9:\"show_date\";i:0;}}','yes'),
@@ -260,14 +260,7 @@ VALUES
 	(137,'_transient_timeout_plugin_slugs','1371855029','no'),
 	(138,'_transient_plugin_slugs','a:2:{i:0;s:19:\"akismet/akismet.php\";i:1;s:9:\"hello.php\";}','no'),
 	(139,'_transient_timeout_dash_de3249c4736ad3bd2cd29147c4a0d43e','1371811829','no'),
-	(140,'_transient_dash_de3249c4736ad3bd2cd29147c4a0d43e','<h4>Most Popular</h4>\n<h5><a href=\'http://wordpress.org/plugins/jetpack/\'>Jetpack by WordPress.com</a></h5>&nbsp;<span>(<a href=\'plugin-install.php?tab=plugin-information&amp;plugin=jetpack&amp;_wpnonce=00a4393e4a&amp;TB_iframe=true&amp;width=600&amp;height=800\' class=\'thickbox\' title=\'Jetpack by WordPress.com\'>Install</a>)</span>\n<p>Supercharge your WordPress site with powerful features previously only available to WordPress.com users.</p>\n<h4>Newest Plugins</h4>\n<h5><a href=\'http://wordpress.org/plugins/multisite-dashboard-broadcast/\'>Multisite Dashboard Broadcast</a></h5>&nbsp;<span>(<a href=\'plugin-install.php?tab=plugin-information&amp;plugin=multisite-dashboard-broadcast&amp;_wpnonce=a7836395dd&amp;TB_iframe=true&amp;width=600&amp;height=800\' class=\'thickbox\' title=\'Multisite Dashboard Broadcast\'>Install</a>)</span>\n<p>Place a widget on top of every site&#039;s dashboard under the same Multisite installation, containing whatever content the Super Admin writes.</p>\n','no'),
-	(141,'_site_transient_timeout_wporg_theme_feature_list','1371780321','yes'),
-	(142,'_site_transient_wporg_theme_feature_list','a:5:{s:6:\"Colors\";a:15:{i:0;s:5:\"black\";i:1;s:4:\"blue\";i:2;s:5:\"brown\";i:3;s:4:\"gray\";i:4;s:5:\"green\";i:5;s:6:\"orange\";i:6;s:4:\"pink\";i:7;s:6:\"purple\";i:8;s:3:\"red\";i:9;s:6:\"silver\";i:10;s:3:\"tan\";i:11;s:5:\"white\";i:12;s:6:\"yellow\";i:13;s:4:\"dark\";i:14;s:5:\"light\";}s:7:\"Columns\";a:6:{i:0;s:10:\"one-column\";i:1;s:11:\"two-columns\";i:2;s:13:\"three-columns\";i:3;s:12:\"four-columns\";i:4;s:12:\"left-sidebar\";i:5;s:13:\"right-sidebar\";}s:5:\"Width\";a:2:{i:0;s:11:\"fixed-width\";i:1;s:14:\"flexible-width\";}s:8:\"Features\";a:19:{i:0;s:8:\"blavatar\";i:1;s:10:\"buddypress\";i:2;s:17:\"custom-background\";i:3;s:13:\"custom-colors\";i:4;s:13:\"custom-header\";i:5;s:11:\"custom-menu\";i:6;s:12:\"editor-style\";i:7;s:21:\"featured-image-header\";i:8;s:15:\"featured-images\";i:9;s:15:\"flexible-header\";i:10;s:20:\"front-page-post-form\";i:11;s:19:\"full-width-template\";i:12;s:12:\"microformats\";i:13;s:12:\"post-formats\";i:14;s:20:\"rtl-language-support\";i:15;s:11:\"sticky-post\";i:16;s:13:\"theme-options\";i:17;s:17:\"threaded-comments\";i:18;s:17:\"translation-ready\";}s:7:\"Subject\";a:3:{i:0;s:7:\"holiday\";i:1;s:13:\"photoblogging\";i:2;s:8:\"seasonal\";}}','yes'),
-	(143,'theme_mods_twentytwelve','a:1:{s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1371769521;s:4:\"data\";a:4:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:6:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";i:3;s:10:\"archives-2\";i:4;s:12:\"categories-2\";i:5;s:6:\"meta-2\";}s:9:\"sidebar-2\";a:0:{}s:9:\"sidebar-3\";a:0:{}}}}','yes'),
-	(144,'current_theme','redapple','yes'),
-	(145,'theme_mods_redapple','a:1:{i:0;b:0;}','yes'),
-	(146,'theme_switched','','yes'),
-	(147,'category_children','a:0:{}','yes');
+	(140,'_transient_dash_de3249c4736ad3bd2cd29147c4a0d43e','<h4>Most Popular</h4>\n<h5><a href=\'http://wordpress.org/plugins/jetpack/\'>Jetpack by WordPress.com</a></h5>&nbsp;<span>(<a href=\'plugin-install.php?tab=plugin-information&amp;plugin=jetpack&amp;_wpnonce=00a4393e4a&amp;TB_iframe=true&amp;width=600&amp;height=800\' class=\'thickbox\' title=\'Jetpack by WordPress.com\'>Install</a>)</span>\n<p>Supercharge your WordPress site with powerful features previously only available to WordPress.com users.</p>\n<h4>Newest Plugins</h4>\n<h5><a href=\'http://wordpress.org/plugins/multisite-dashboard-broadcast/\'>Multisite Dashboard Broadcast</a></h5>&nbsp;<span>(<a href=\'plugin-install.php?tab=plugin-information&amp;plugin=multisite-dashboard-broadcast&amp;_wpnonce=a7836395dd&amp;TB_iframe=true&amp;width=600&amp;height=800\' class=\'thickbox\' title=\'Multisite Dashboard Broadcast\'>Install</a>)</span>\n<p>Place a widget on top of every site&#039;s dashboard under the same Multisite installation, containing whatever content the Super Admin writes.</p>\n','no');
 
 /*!40000 ALTER TABLE `wp_options` ENABLE KEYS */;
 UNLOCK TABLES;
