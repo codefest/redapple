@@ -61,7 +61,7 @@ function redapple_js_activation() {
 	);
 	
 	
-	wp_register_style( 'normalize', get_template_directory_uri() . '/css/normalize.min.css' );
+	wp_register_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
 	wp_enqueue_style( 'normalize' );
 	// @todo: do we need fontawesome?
 	//wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css' );
