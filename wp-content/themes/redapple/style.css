@@ -13,10 +13,20 @@ Table of contents
 
 ########################
 */
+
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,200italic,600,700italic,600italic,700);
+
+
+
+
 /*
 ==helper classes
 */
-
+.container{
+	width: 918px;
+	padding:22px;
+	background-color: #ffffff;
+}
 /* Hide from both screenreaders and browsers: h5bp.com/u */
 .hidden {
 	display: none !important;
@@ -70,6 +80,10 @@ Hide visually and from screenreaders, but maintain layout
 /* 
 == base styles - defaults 
 */
+html{
+	font-family:"Titillium Web", Verdana, Arial, Helvetica, sans-serif;
+	background-color:#ebe7dc;
+}
 html,
 button,
 input,
@@ -86,6 +100,7 @@ textarea {
     background: #b3d4fc;
     text-shadow: none;
 }
+/* @TODO EVERYTHING!!! (Header Styles) */
 hr {
     display: block;
     height: 1px;
