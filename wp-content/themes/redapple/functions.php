@@ -32,7 +32,7 @@ function redapple_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary-menu'=> 'Primary Menu',
-		'sidebar-menu' => 'Sidebar Menu',
+		'utility-menu' => 'Utility Menu',
 		'footer-menu' =>'Footer Menu',
 		));	
 
@@ -93,4 +93,19 @@ function redapple_header_titles() {
 	} else {
 		bloginfo('name'); 
 	}
+}
+/**
+ * display the 25 days of class in a nifty bar
+ * @todo: make this real
+ */
+function ra_days_bar(){
+	?>
+	<ul class="ra-days-bar">
+		<li>this is fake</li>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>...</li>
+	</ul>
+	<?php
 }
