@@ -1,5 +1,5 @@
 <footer role="contentinfo">
-    Footer!
+   <?php dynamic_sidebar( 'footer-area' ) ?>
 </footer>
 		<?php wp_footer(); ?>
     </body>

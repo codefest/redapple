@@ -13,7 +13,7 @@ Table of contents
 ########################
 */
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,200italic,600,700italic,600italic,700);
-
+@import url(css/dynamic-css.php);
 
 /*
 ==helper classes
@@ -87,7 +87,6 @@ Hide visually and from screenreaders, but maintain layout
 
 html{
 	font-family:"Titillium Web", Verdana, Arial, Helvetica, sans-serif;
-	background-color:#ebe7dc;
 }
 html,
 button,
@@ -152,7 +151,8 @@ footer[role=contentinfo]{
 	clear:both;
 }
 /*
-== base colors
+== tint/shade colors
+put all accent colors in dynamic-css.php!!!!!
  */
  header[role=banner]{
 	background-color:rgba(0,0,0,.1);
@@ -173,7 +173,6 @@ header[role=banner] ul li{
 }
 header[role=banner] ul a{
 	padding:.5em;
-	color:white;
 	text-decoration: none;
 	display: block;
 }
@@ -248,7 +247,9 @@ aside .widget{
 	margin: 0 0 4% 4% ;
 }
 
-
+/*
+== 
+*/
 
 
 
