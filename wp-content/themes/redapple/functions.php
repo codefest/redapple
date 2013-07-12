@@ -36,6 +36,45 @@ function redapple_setup() {
 		'footer-menu' =>'Footer Menu',
 		));	
 
+	//four widget areas
+	register_sidebar( array(
+		'name' => 'Sidebar - Top',
+		'id' => 'top-sidebar',
+		'description' => 'The top and widest sidebar area',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+		'before_widget' => '<section class="widget %2$s" id="%1$s">',
+		'after_widget' => '</section>',
+		) );
+	register_sidebar( array(
+		'name' => 'Sidebar  - secondary',
+		'id' => 'secondary-sidebar',
+		'description' => 'A narrow sidebar below the top sidebar',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+		'before_widget' => '<section class="widget %2$s" id="%1$s">',
+		'after_widget' => '</section>',
+		) );
+	register_sidebar( array(
+		'name' => 'Sidebar - tertiary',
+		'id' => 'tertiary-sidebar',
+		'description' => 'A narrow sidebar below the top sidebar',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+		'before_widget' => '<section class="widget %2$s" id="%1$s">',
+		'after_widget' => '</section>',
+		) );
+	register_sidebar( array(
+		'name' => 'Footer Area',
+		'id' => 'footer-area',
+		'description' => 'The Footer area at the bottom of every page',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+		'before_widget' => '<section class="widget %2$s" id="%1$s">',
+		'after_widget' => '</section>',
+		) );
+
+
 	 if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 }
 

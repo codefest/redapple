@@ -33,7 +33,10 @@
                 'menu_class' => 'main-nav',
             ) ); ?>
 
-            <?php if(function_exists('ra_days_bar'))
-                 ra_days_bar(); 
-            ?>
+           
     </header>
+
+<?php 
+if(function_exists('ra_days_bar'))
+    ra_days_bar(); 
+?>
