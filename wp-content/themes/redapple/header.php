@@ -30,6 +30,7 @@
             <?php wp_nav_menu( array(
                 'theme_location' => 'primary-menu',
                 'container' => 'nav',
+                'menu_class' => 'main-nav',
             ) ); ?>
 
             <?php if(function_exists('ra_days_bar'))

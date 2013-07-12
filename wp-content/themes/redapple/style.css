@@ -10,18 +10,19 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ########################
 Table of contents
-
 ########################
 */
-
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,200italic,600,700italic,600italic,700);
-
-
-
 
 /*
 ==helper classes
 */
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
 .container{
 	width: 918px;
 	padding:22px;
@@ -128,6 +129,9 @@ body{
 	margin:0 auto;
 	width:98%;
 }
+header[role="banner"]{
+	position:relative;
+}
 main[role=main]{
 	width:60%;
 	float:left;
@@ -139,3 +143,56 @@ aside[role=complementary]{
 footer[role=contentinfo]{
 	clear:both;
 }
+/*
+== base colors
+ */
+ header[role=banner]{
+	background-color:rgba(0,0,0,.1);
+}
+
+/*
+== navigation 
+*/
+header[role=banner] ul{
+	margin: 0;
+	padding: 0;
+}
+header[role=banner] ul li{
+	display:inline-block;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+header[role=banner] ul li a{
+	padding:.5em;
+	color:white;
+	text-decoration: none;
+}
+header[role=banner] .main-nav li ul,
+header[role=banner] .utilities li ul
+{
+	 /* hide drop-down menus */
+	position: absolute;
+	background-color:rgba(0,0,0,.8);
+	left:-9999em;
+	max-width: 200%;
+}
+header .utilities{
+	max-width:50%;
+	background-color:rgba(0,0,0,.3);
+	position:absolute;
+	top:0;
+	right:0;
+}
+header[role=banner] .main-nav li:hover ul,
+header[role=banner] .utilities li:hover ul{
+	left:0;
+}
+header[role=banner] .main-nav li ul li,
+header[role=banner] .utilities li ul li{
+	float: none;
+	display: block;
+	white-space: nowrap;
+}
+
+
