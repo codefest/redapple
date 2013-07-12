@@ -163,10 +163,11 @@ header[role=banner] ul li{
 	padding: 0;
 	position: relative;
 }
-header[role=banner] ul li a{
+header[role=banner] ul a{
 	padding:.5em;
 	color:white;
 	text-decoration: none;
+	display: block;
 }
 header[role=banner] .main-nav li ul,
 header[role=banner] .utilities li ul
@@ -177,12 +178,23 @@ header[role=banner] .utilities li ul
 	left:-9999em;
 	max-width: 200%;
 }
+header h1{
+	float:left;
+	max-width: 50%;
+}
 header .utilities{
 	max-width:50%;
 	background-color:rgba(0,0,0,.3);
-	position:absolute;
-	top:0;
-	right:0;
+	float:right;
+}
+header .main-nav{
+	clear: both;
+}
+header ul a:hover{
+	background-color:red;
+}
+.current_page_item, .current_page_ancestor, .current_page_parent{
+	background-color:rgba(256,256,256,.2)
 }
 header[role=banner] .main-nav li:hover ul,
 header[role=banner] .utilities li:hover ul{
