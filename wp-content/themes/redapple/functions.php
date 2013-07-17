@@ -21,6 +21,15 @@ function redapple_setup() {
 
 	// Adds RSS feed links to <head> for posts and comments.
 	add_theme_support( 'automatic-feed-links' );
+
+	$header_args = array(
+		'default-text-color' => '#eae7db',
+		'default-image' => get_template_directory_uri() . '/img/default-header.jpg',
+		'flex-height'  => true,
+		'flex-width'  => true,
+	);
+	add_theme_support( 'custom-header', $header_args );
+	add_theme_support( 'custom-background' );
 	
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
 	add_theme_support( 'post-thumbnails', array( 'redapple-resources' ) );
@@ -141,7 +150,7 @@ function ra_days_bar(){
 	?>
 	<ul class="ra-days-bar">
 		<li>this is fake</li>
-		<li>1</li>
+		<li class="current">1</li>
 		<li>2</li>
 		<li>3</li>
 		<li>...</li>

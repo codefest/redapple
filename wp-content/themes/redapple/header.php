@@ -11,6 +11,12 @@
     <meta name="viewport" content="width=device-width">
     <?php wp_head(); ?>
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
+
+    <style type="text/css">
+    header[role=banner]{
+    background-image: url(<?php header_image(); ?>);
+    background-size: cover;
+        }</style>
   
 </head>
 <body>
@@ -19,6 +25,7 @@
     <![endif]-->
 
     <header role="banner">
+
         <h1><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 
         <?php wp_nav_menu( array(
