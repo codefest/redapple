@@ -19,4 +19,21 @@ body{
 header a{
   color:<?php echo $nav_link_color; ?>
 }
+header .main-nav,
+input[type=submit], 
+input[type=button],
+button,
+.primary-action{
+  background-color:<?php echo $primary_color; ?>;
+}
+header ul a:hover{
+  background-color:<?php echo $text_color; ?>;
+}
+aside .widget-title,
+.ra-days-bar{
+  background-color: <?php echo $text_color; ?>;
+  color: <?php echo $body_color; ?>;
+}
+
+
 
