@@ -105,6 +105,7 @@ function ra_days_bar(){
 	<?php 
 	//get all the terms in the taxonomy
 	$terms = get_terms('class-day', $args);
+	//TODO:  add a counter here so the CSS width is based on the number of terms.
 
 		//loop through each term (day)		
 		foreach ($terms as $term) {

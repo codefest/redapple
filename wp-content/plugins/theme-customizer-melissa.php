@@ -91,6 +91,7 @@ add_action( 'wp_head', 'redapple_customize_css');
 /**
  * Putting Theme Customizer on the Appearance Menu Rather than Hidden
  * @since ver. 0.1
+ * @TODO:  remove this for 3.6?
  */
 
 add_action ('admin_menu', 'themedemo_admin');
