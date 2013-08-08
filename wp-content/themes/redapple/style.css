@@ -88,13 +88,7 @@ Hide visually and from screenreaders, but maintain layout
 html{
 	font-family:"Titillium Web", Verdana, Arial, Helvetica, sans-serif;
 }
-html,
-button,
-input,
-select,
-textarea {
-    color: #222;
-}
+
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -166,6 +160,8 @@ put all accent colors in dynamic-css.php!!!!!
 header[role=banner] ul{
 	margin: 0;
 	padding: 0;
+
+
 }
 header[role=banner] ul li{
 	display:inline-block;
@@ -174,9 +170,13 @@ header[role=banner] ul li{
 	position: relative;
 }
 header[role=banner] ul a{
-	padding:.5em;
+	padding:.5em .5em .2em .5em;
 	text-decoration: none;
 	display: block;
+}
+header[role=banner] .utilities a{
+	padding: .3em .5em;
+	font-size: .9em;
 }
 header[role=banner] .main-nav li ul,
 header[role=banner] .utilities li ul
@@ -184,6 +184,7 @@ header[role=banner] .utilities li ul
 	 /* hide drop-down menus */
 	position: absolute;
 	background-color:rgba(0,0,0,.8);
+	z-index: 1200;
 	left:-9999em;
 	max-width: 200%;
 }
@@ -196,25 +197,25 @@ header h1{
 	top:0;
 	left:1em;
 	padding:.5em 1em;
+	z-index: 1500;
 }
 header h1 a{
 	color:black;
 	text-decoration: none;
 }
 header .utilities{
-	max-width:50%;
-	background-color:rgba(0,0,0,.3);
-	float:right;
+	width: 100%;
+	text-align:right;
+	opacity: .85;
 }
 header .main-nav{
 	position:absolute;
 	bottom:0;
 	left:1em;
+	z-index:500;
 }
 
-.current_page_item, .current_page_ancestor, .current_page_parent{
-	background-color:rgba(256,256,256,.2)
-}
+
 header[role=banner] .main-nav li:hover ul,
 header[role=banner] .utilities li:hover ul{
 	left:0;
@@ -263,14 +264,15 @@ aside .widget{
 .widget-title{
 	padding:0 .25em;
 	position: relative;
+	margin-right:2em;
 }
 .widget-title:after{
 	content: '.';
 	display: inline-block;
-	background-color: red;
+	
 	width:1.5em;
 	position: absolute;
-	right:1em;
+	right:-1em;
 	-moz-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(-30deg) skewY(0deg);
 		-webkit-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(-30deg) skewY(0deg);
         -o-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(-30deg) skewY(0deg);

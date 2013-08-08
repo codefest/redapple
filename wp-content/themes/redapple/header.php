@@ -10,6 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <?php wp_head(); ?>
+
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 
     <style type="text/css">
@@ -37,7 +38,7 @@
             <?php wp_nav_menu( array(
                 'theme_location' => 'primary-menu',
                 'container' => 'nav',
-                'menu_class' => 'main-nav',
+                'menu_class' => 'main-nav clearfix cf',
             ) ); ?>
 
            
