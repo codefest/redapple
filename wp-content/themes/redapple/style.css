@@ -236,11 +236,13 @@ header[role=banner] .utilities li ul li{
 	margin:1em ;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;	
+	padding: 0;
 }
 .ra-days-bar li{
 	display: inline-block;
-	border-right:solid 1px gray;
+	
 	padding:.25em;
+	width:3.8%;
 	text-align: center;
 }
 /* 

@@ -27,7 +27,7 @@ function redapple_setup() {
 		'default-image' => get_template_directory_uri() . '/img/default-header.jpg',
 		'flex-height'  => true,
 		'flex-width'  => true,
-	);
+		);
 	add_theme_support( 'custom-header', $header_args );
 	add_theme_support( 'custom-background' );
 	
@@ -84,7 +84,7 @@ function redapple_setup() {
 		) );
 
 
-	 if ( is_singular() ) wp_enqueue_script( "comment-reply" );
+	if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 }
 
 /**
@@ -95,18 +95,18 @@ function redapple_setup() {
  */
 add_action( 'wp_enqueue_scripts', 'redapple_js_activation' ); 
 function redapple_js_activation() {
-    wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'jquery' );
 	$modernizr_path = get_template_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js';
-    wp_register_script( 'modernizrjs', $modernizr_path );
-    wp_enqueue_script( 'modernizrjs' );
+	wp_register_script( 'modernizrjs', $modernizr_path );
+	wp_enqueue_script( 'modernizrjs' );
 
-    wp_enqueue_script(
+	wp_enqueue_script(
 		'main-js',
 		get_template_directory_uri() . '/js/main.js',
 		array( 'jquery' ),
 		false,
 		true // loaded in the footer
-	);
+		);
 	
 	
 	wp_register_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
@@ -142,18 +142,4 @@ function redapple_header_titles() {
 		bloginfo('name'); 
 	}
 }
-/**
- * display the 25 days of class in a nifty bar
- * @todo: make this real
- */
-function ra_days_bar(){
-	?>
-	<ul class="ra-days-bar">
-		<li>this is fake</li>
-		<li class="current">1</li>
-		<li>2</li>
-		<li>3</li>
-		<li>...</li>
-	</ul>
-	<?php
-}
+ 
