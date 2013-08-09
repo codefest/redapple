@@ -64,7 +64,15 @@ function display_css(){
      		     				
 		
 	}
-	//todo: finish this css!
+
+    //calculate rgb values from the body text color for the widget BGs
+    $rgb_bodytext = hex2RGB($color[5]);
+    $faded_bodytext = 'rgba('.$rgb_bodytext['red'].','.$rgb_bodytext['blue'].','.$rgb_bodytext['green'].', .05)';
+    //calc the rgb from the body BG for the category BGs
+    $rgb_bodybg = hex2RGB($color[2]);
+    $faded_bodybg = 'rgba('.$rgb_bodybg['red'].','.$rgb_bodybg['blue'].','.$rgb_bodybg['green'].', .1)';
+
+
 	return     'html { background-color: #'.$color[4].' ; color: #'.$color[5].'; }
                 body{background-color:  #'.$color[2].'}
      			header a { color: #'.$color[7].'; }
@@ -74,7 +82,10 @@ function display_css(){
 				header ul a:hover { background-color: #'.$color[1].';border-bottom:solid .375em #'.$color[1].';  }
 				aside .widget-title, .ra-days-bar, .utilities { background-color: #'.$color[6].'; color:#'.$color[7].'; }
 				a { color:  #'.$color[0].'; }
-                .widget-title:after{ background-color:#'.$color[1].'; color:#'.$color[1].'; }';    
+                .widget-title:after{ background-color:#'.$color[1].'; color:#'.$color[1].'; }
+                .post-meta, aside .widget{background-color:'.$faded_bodytext.';}
+                .entry-date .month{ background-color: #'.$color[3].';color:#'.$color[2].'}
+                .entry-categories a{color:#'.$color[3].'; background-color:'.$faded_bodybg.';}';    
 
 }
 function redapple_customize_css() {
@@ -170,6 +181,30 @@ function redapple_option_sanitize($input){
     }
 
 }
-
+/**
+ * Convert a hexa decimal color code to its RGB equivalent
+ *
+ * @param string $hexStr (hexadecimal color value)
+ * @param boolean $returnAsString (if set true, returns the value separated by the separator character. Otherwise returns associative array)
+ * @param string $seperator (to separate RGB values. Applicable only if second parameter is true.)
+ * @return array or string (depending on second parameter. Returns False if invalid hex color value)
+ */                                                                                                 
+function hex2RGB($hexStr, $returnAsString = false, $seperator = ',') {
+    $hexStr = preg_replace("/[^0-9A-Fa-f]/", '', $hexStr); // Gets a proper hex string
+    $rgb_bodytextArray = array();
+    if (strlen($hexStr) == 6) { //If a proper hex code, convert using bitwise operation. No overhead... faster
+        $colorVal = hexdec($hexStr);
+        $rgb_bodytextArray['red'] = 0xFF & ($colorVal >> 0x10);
+        $rgb_bodytextArray['green'] = 0xFF & ($colorVal >> 0x8);
+        $rgb_bodytextArray['blue'] = 0xFF & $colorVal;
+    } elseif (strlen($hexStr) == 3) { //if shorthand notation, need some string manipulations
+        $rgb_bodytextArray['red'] = hexdec(str_repeat(substr($hexStr, 0, 1), 2));
+        $rgb_bodytextArray['green'] = hexdec(str_repeat(substr($hexStr, 1, 1), 2));
+        $rgb_bodytextArray['blue'] = hexdec(str_repeat(substr($hexStr, 2, 1), 2));
+    } else {
+        return false; //Invalid hex color code
+    }
+    return $returnAsString ? implode($seperator, $rgb_bodytextArray) : $rgb_bodytextArray; // returns the rgb string or the associative array
+}
 
 //Do Not Close PHP

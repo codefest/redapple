@@ -19,10 +19,10 @@ Table of contents
 ==helper classes
 */
 .chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
 }
 .container{
 	width: 918px;
@@ -50,34 +50,34 @@ Table of contents
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
- 	clip: auto;
- 	height: auto;
- 	margin: 0;
- 	overflow: visible;
- 	position: static;
- 	width: auto;
- }
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
 
 /*
 Hide visually and from screenreaders, but maintain layout
 */
- .invisible {
- 	visibility: hidden;
- }
+.invisible {
+	visibility: hidden;
+}
 
 /* Clearfix: contain floats */
 
 .clearfix:before,
 .clearfix:after {
- 	content: " "; /* 1 */
- 	display: table; /* 2 */
+	content: " "; /* 1 */
+	display: table; /* 2 */
 }
 
 .clearfix:after {
- 	clear: both;
+	clear: both;
 }
 .clearfix {
- 	*zoom: 1;
+	*zoom: 1;
 }
 /* 
 == base styles - defaults 
@@ -90,33 +90,33 @@ html{
 }
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+	background: #b3d4fc;
+	text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+	background: #b3d4fc;
+	text-shadow: none;
 }
 /* @TODO EVERYTHING!!! (Header Styles) */
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
 }
 img {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+	border: 0;
+	margin: 0;
+	padding: 0;
 }
 textarea {
-    resize: vertical;
+	resize: vertical;
 }
 /*
 ==super-basic layout
@@ -129,26 +129,12 @@ body{
 header[role="banner"]{
 	position:relative;
 }
-main[role=main]{
-	width:60%;
-	float:left;
-}
-aside[role=complementary]{
-	width:40%;
-	float:right;
-}
-aside .secondary-widgets{
-	width:50%;
-	float:left;
-}
-footer[role=contentinfo]{
-	clear:both;
-}
+
 /*
 == tint/shade colors
 put all accent colors in dynamic-css.php!!!!!
- */
- header[role=banner]{
+*/
+header[role=banner]{
 	background-color:rgba(0,0,0,.1);
 	min-height: 10em;
 	position: relative;
@@ -181,7 +167,7 @@ header[role=banner] .utilities a{
 header[role=banner] .main-nav li ul,
 header[role=banner] .utilities li ul
 {
-	 /* hide drop-down menus */
+	/* hide drop-down menus */
 	position: absolute;
 	background-color:rgba(0,0,0,.8);
 	z-index: 1200;
@@ -203,17 +189,7 @@ header h1 a{
 	color:black;
 	text-decoration: none;
 }
-header .utilities{
-	width: 100%;
-	text-align:right;
-	opacity: .85;
-}
-header .main-nav{
-	position:absolute;
-	bottom:0;
-	left:1em;
-	z-index:500;
-}
+
 
 
 header[role=banner] .main-nav li:hover ul,
@@ -232,18 +208,46 @@ header[role=banner] .utilities li ul li{
 */
 
 .ra-days-bar{
-	list-style-type: none;
-	margin:1em ;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;	
-	padding: 0;
+	display: none;
 }
-.ra-days-bar li{
-	display: inline-block;
-	
-	padding:.25em;
-	width:3.8%;
+/* 
+==post layout
+*/
+main a{
+	text-decoration: none;
+}
+.hentry{
+	position: relative;
+	padding-bottom: 2em;
+}
+
+
+.post-meta{
+	padding:.35em;
+}
+time.entry-date{
+	float: left;
+	margin-right: 1em;
+	width: 2.5em;
+	background-color: #eee;
+	background-color: rgba(255,255,255,.7);
+	color:black;
 	text-align: center;
+	-webkit-box-shadow:  1px 1px 2px 0px rgba(0, 0, 0, .2);
+
+	box-shadow:  1px 1px 2px 0px rgba(0, 0, 0, .2);
+}
+.entry-date .month{
+
+	padding: .2em;
+	font-size: .6em;
+	display: block;	
+}
+.entry-date .day{
+	font-weight: bold;
+	font-size: .9em;
+	padding: 0 ;
+	display: block;
 }
 /* 
 == post typography
@@ -256,7 +260,7 @@ header[role=banner] .utilities li ul li{
 == widgets 
 */
 aside .widget{
-	background-color: rgba(0,0,0,.05);
+
 	margin:0   0 2% 2% ;
 	padding: .5em;
 }
@@ -276,16 +280,90 @@ aside .widget{
 	position: absolute;
 	right:-1em;
 	-moz-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(-30deg) skewY(0deg);
-		-webkit-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(-30deg) skewY(0deg);
-        -o-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(-30deg) skewY(0deg);
-        -ms-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(-30deg) skewY(0deg);
-        transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(-30deg) skewY(0deg);
+	-webkit-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(-30deg) skewY(0deg);
+	-o-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(-30deg) skewY(0deg);
+	-ms-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(-30deg) skewY(0deg);
+	transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(-30deg) skewY(0deg);
 }
 
 
 /*
-== 
+== Responsive Breakpoints
 */
+@media (min-width:600px) {
+	main[role=main]{
+		width:70%;
+		float:left;
+	}
+	aside[role=complementary]{
+		width:30%;
+		float:right;
+	}
+	aside .secondary-widgets{
+		width:30%;
+		float:right;
+	}
+	footer[role=contentinfo]{
+		clear:both;
+	}
+	header .utilities{
+		width: 100%;
+		text-align:right;
+		opacity: .85;
+	}
+	header .main-nav{
+		position:absolute;
+		bottom:0;
+		left:1em;
+		z-index:500;
+	}
+	.ra-days-bar{
+		display: block;
+		list-style-type: none;
+		margin:1em ;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;	
+		padding: 0;
+	}
+	.ra-days-bar li{
+		display: inline-block;
+
+		padding:.25em;
+		width:3.8%;
+		text-align: center;
+	}
+	.entry-thumb{
+	float:right;
+	margin-left:2%;
+	max-width: 50%;
+	height: auto;
+	}
+}
+@media (min-width:800px) {
+	.entry-title{
+		
+		margin: 0;
+		padding: 0;
+	}
+	.entry-categories{
+		position: absolute;
+		top:2%;
+		right: 2%;
+	}
+	main[role=main]{
+		width:60%;
+		float:left;
+	}
+	aside[role=complementary]{
+		width:40%;
+		float:right;
+	}
+	aside .secondary-widgets{
+		width:50%;
+		float:left;
+	}
+	
+}
 
 
 

@@ -112,7 +112,7 @@ function ra_days_bar(){
 			echo '<li>';
 			//if the term has posts assigned, link to the archive otherwise, no link necessary
 			if($term->count){
-				echo '<a href="'.get_term_link( $term->slug, 'class-day' ).'" title="' . sprintf(__('View all post filed under %s', 'my_localization_domain'), $term->name) . '">';
+				echo '<a href="'.get_term_link( $term->slug, 'class-day' ).'" title="View all posts from Day '. $term->name. '">';
 			}
 			//show the name
 			echo  $term->name ;
