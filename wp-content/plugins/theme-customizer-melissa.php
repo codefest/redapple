@@ -75,13 +75,14 @@ function display_css(){
 
 	return     'html { background-color: #'.$color[4].' ; color: #'.$color[5].'; }
                 body{background-color:  #'.$color[2].'}
-     			header a { color: #'.$color[7].'; }
-     			header .main-nav, input[type=submit], input[type=button], button, .primary-action { background-color: #'.$color[0].' ; color: #'.$color[7].';}
-               
+     			        a { color:  #'.$color[0].'; }
+                a:hover, a:focus{color:#'.$color[3].';}
+                header a { color: #'.$color[7].';border-bottom:solid .375em transparent; }
+     			header .main-nav, input[type=submit], input[type=button], button, .primary-action { background-color: #'.$color[0].' ; color: #'.$color[7].';}               
                 .current_page_item a, .current_page_ancestor a, .current_page_parent a{ border-bottom:solid .375em #'.$color[1].'; }
-				header ul a:hover { background-color: #'.$color[1].';border-bottom:solid .375em #'.$color[1].';  }
+				header ul a:hover { background-color: #'.$color[1].';border-bottom:solid .375em #'.$color[1].';color: #'.$color[7].';  }
 				aside .widget-title, .ra-days-bar, .utilities { background-color: #'.$color[6].'; color:#'.$color[7].'; }
-				a { color:  #'.$color[0].'; }
+
                 .widget-title:after{ background-color:#'.$color[1].'; color:#'.$color[1].'; }
                 .post-meta, aside .widget{background-color:'.$faded_bodytext.';}
                 .entry-date .month{ background-color: #'.$color[3].';color:#'.$color[2].'}

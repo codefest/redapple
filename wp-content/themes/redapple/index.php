@@ -37,8 +37,12 @@
 				<span class="month"><?php the_time( 'M' ) ?></span>
 				<span class="day"><?php the_time( 'j' ) ?></span>
 			</time>
-
-			<?php the_tags(); ?> 
+			 
+			
+			<?php the_terms( $post->ID, 'class-day', '<span class="class-day">Day: ', ', ','</span>' ) ?>
+			<span class="entry-tags">
+			<?php the_tags(); ?>
+			</span>
 			</footer>
 	</article>	
 	<?php endwhile; ?>

@@ -32,7 +32,7 @@ function redapple_setup() {
 	add_theme_support( 'custom-background' );
 	
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
-	add_theme_support( 'post-thumbnails', array( 'redapple-resources' ) );
+	add_theme_support( 'post-thumbnails' );
 	
 	//image sizes
 	add_image_size( 'redapple-small-tile', 300, 193, true );

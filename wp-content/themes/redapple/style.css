@@ -232,6 +232,7 @@ aside img{
 }
 .post-meta{
 	padding:.35em;
+	clear: both;
 }
 time.entry-date{
 	float: left;
@@ -383,10 +384,7 @@ aside[role=complementary] li:before{
 		opacity: .85;
 	}
 	header .main-nav{
-		position:absolute;
-		bottom:0;
-		left:1em;
-		z-index:500;
+		margin-top:6em;
 	}
 	/*==days bar*/
 	.ra-days-bar{
@@ -407,9 +405,11 @@ aside[role=complementary] li:before{
 	/*==post layout*/
 	.entry-thumb{
 		float:right;
-		margin-left:2%;
+		margin:0 0 2% 2%;
 		max-width: 50%;
 		height: auto;
+		padding:.25em;
+		border:solid 1px rgba(0,0,0,.2);
 	}
 	/*==widgets*/
 	aside .widget{
