@@ -110,7 +110,7 @@ function ra_days_bar(){
 		//loop through each term (day)		
 		foreach ($terms as $term) {
 			echo '<li';
-			if(is_tax('class_day', $term->slug)){
+			if(is_tax('class-day', $term->slug)){
 				echo ' class="current"';
 			}
 			echo '>';
