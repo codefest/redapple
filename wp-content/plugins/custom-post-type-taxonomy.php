@@ -109,7 +109,11 @@ function ra_days_bar(){
 
 		//loop through each term (day)		
 		foreach ($terms as $term) {
-			echo '<li>';
+			echo '<li';
+			if(is_tax('class_day', $term->slug)){
+				echo ' class="current"';
+			}
+			echo '>';
 			//if the term has posts assigned, link to the archive otherwise, no link necessary
 			if($term->count){
 				echo '<a href="'.get_term_link( $term->slug, 'class-day' ).'" title="View all posts from Day '. $term->name. '">';
