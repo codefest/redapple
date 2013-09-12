@@ -89,34 +89,63 @@ register_activation_hook( __FILE__, 'ra_flush' );
  */
 function ra_days_bar(){
 
+	$taxonomy = 'class_day';
+
 	$args = array(
-		'taxonomy'     	=> 'class-day',
+		'taxonomy'     	=> $taxonomy,
 		'orderby'     	=> 'slug',
 		'show_count'   	=> 0,
 		'pad_counts'  	=> 0,
 		'hierarchical' 	=> 0,
 		'title_li'     	=> '',
 		'hide_empty'	=> 0,
+
 	);
 	?>
 
 	<ul class="ra-days-bar">
-		<li>Day: </li>
+		<li class="title-li">Day: </li>
 	<?php 
 	//get all the terms in the taxonomy
-	$terms = get_terms('class-day', $args);
+	$terms = get_terms($taxonomy, $args);
+	//this was necessary to run again so i have IDs for the tax query.
+	//TODO: see if this can be dome with only one use of "get_terms"
+	$terms_ids = get_terms( 
+		$taxonomy, array(
+    'hide_empty' => 0,
+    'fields' => 'ids'
+) );
 	//TODO:  add a counter here so the CSS width is based on the number of terms.
-
+	$posts = get_posts();
+	$latest_posts = wp_get_recent_posts( array(
+			'numberposts' => 1,
+			'post_status' => 'publish',
+			'tax_query' => array(
+				array(
+					'taxonomy' => $taxonomy,
+					'field' => 'id',
+					'terms' => $terms_ids,
+					
+				)
+			)
+		) );
+	foreach($latest_posts as $latest_post){
+		$latest_post_id = $latest_post['ID'];
+	}
 		//loop through each term (day)		
 		foreach ($terms as $term) {
-			echo '<li';
-			if(is_tax('class-day', $term->slug)){
-				echo ' class="current"';
+
+			echo '<li class="bar-item ';
+			if(is_tax($taxonomy, $term->slug)){
+				echo ' active';
 			}
-			echo '>';
+			if( has_term($term->slug, $taxonomy, $latest_post_id) ){
+				echo ' current';
+			}
+			echo '"">';
 			//if the term has posts assigned, link to the archive otherwise, no link necessary
 			if($term->count){
-				echo '<a href="'.get_term_link( $term->slug, 'class-day' ).'" title="View all posts from Day '. $term->name. '">';
+				echo '<a href="'.get_term_link( $term->slug, $taxonomy ).'" title="View all posts from Day '. $term->name. '">';
 			}
 			//show the name
 			echo  $term->name ;
